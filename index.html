@@ -129,4 +129,336 @@ footer a{display:block;margin:8px 0}
  .links{display:none;position:absolute;top:60px;left:12px;right:12px;background:white;padding:12px;border-radius:12px;box-shadow:0 10px 30px #0001;flex-direction:column;gap:0}
  .links.open{display:flex}
  .links a{padding:12px;border-bottom:1px solid var(--line)}
- .hero
+ .hero{padding:14px 12px 30px}
+ .hero-box{min-height:470px;border-radius:17px}
+ .hero h1{letter-spacing:-4px}
+ .section{padding:30px 12px 42px}
+ .heading{display:block}
+ .heading p{margin-top:12px}
+ .category{height:215px}
+ .cat-text{left:12px;bottom:12px}
+ .cat-text h3{font-size:18px}
+ .products{gap:10px}
+ .product-line{font-size:11px}
+ .add{left:7px;width:calc(100% - 14px);bottom:7px;padding:10px 4px;font-size:9px}
+ .tag{left:7px;top:7px;font-size:8px}
+ .promo{padding:0 12px;margin-bottom:35px}
+ .promo-box{display:block}
+ .newsletter form{flex-direction:column}
+ .footer-cols{grid-template-columns:1fr 1fr}
+ .footer-cols>div:first-child{grid-column:1/-1}
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+}
+</style>
+</head>
+<body>
+<div class="announcement">EVERYDAY ESSENTIALS · YOUR STYLE, YOUR RULES</div>
+
+<header>
+<nav>
+  <a class="logo" href="#home">WEAR YOUR STYLE<span>.</span></a>
+  <div class="links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#shop">Shop All</a>
+    <a href="#about">Our Story</a>
+  </div>
+  <div>
+    <button class="menu" id="menuBtn">☰</button>
+    <button class="bag" id="openBag">BAG <span class="count" id="bagCount">0</span></button>
+  </div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-box">
+    <div class="hero-text">
+      <div class="eyebrow">New season · Everyday streetwear</div>
+      <h1>Wear it.<br>Own it.</h1>
+      <p>Easy everyday fits. Clean designs. Comfortable essentials made to go wherever your day takes you.</p>
+      <a class="btn" href="#shop">Shop the collection ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="heading">
+    <div><div class="kicker">Find your fit</div><h2>Shop by category</h2></div>
+    <p>Start with the essentials and build a wardrobe that feels like you.</p>
+  </div>
+  <div class="categories">
+    <a class="category" href="#shop" data-cat="Hoodies">
+      <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80" alt="Hoodies">
+      <div class="cat-text"><h3>Hoodies</h3><p>Comfort for every day</p></div>
+    </a>
+    <a class="category" href="#shop" data-cat="T-Shirts">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="T-shirts">
+      <div class="cat-text"><h3>T-shirts</h3><p>Your everyday go-to</p></div>
+    </a>
+    <a class="category" href="#shop" data-cat="Oversized Tees">
+      <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80" alt="Oversized tees">
+      <div class="cat-text"><h3>Oversized Tees</h3><p>Relaxed by design</p></div>
+    </a>
+    <a class="category" href="#shop" data-cat="Sweatshirts">
+      <img src="https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=800&q=80" alt="Sweatshirts">
+      <div class="cat-text"><h3>Sweatshirts</h3><p>Layer up your way</p></div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="heading">
+    <div><div class="kicker">The current collection</div><h2>Popular right now</h2></div>
+    <p>Choose your favourite everyday styles.</p>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="All">All products</button>
+    <button class="filter" data-filter="Hoodies">Hoodies</button>
+    <button class="filter" data-filter="T-Shirts">T-shirts</button>
+    <button class="filter" data-filter="Oversized Tees">Oversized tees</button>
+    <button class="filter" data-filter="Sweatshirts">Sweatshirts</button>
+  </div>
+  <div class="products" id="products"></div>
+</section>
+
+<section class="promo" id="about">
+  <div class="promo-box">
+    <div><div class="kicker">Your style, your rules</div><h2>Good fits. No extra fuss.</h2>
+    <p>Everyday clothing should feel comfortable, look good, and fit naturally into your routine. Pick your favourite and make it yours.</p></div>
+    <a class="btn dark" href="#shop">Explore the shop ↗</a>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="kicker">Stay in the loop</div>
+  <h2>Fresh drops, straight to you.</h2>
+  <p>Get updates about new collections and store news.</p>
+  <form id="newsForm">
+    <input type="email" id="newsEmail" placeholder="Your email address" required>
+    <button class="btn dark" type="submit">Join the list</button>
+  </form>
+  <small id="newsMessage">Connect an email service to collect subscribers.</small>
+</section>
+</main>
+
+<footer>
+<div class="footer-inner">
+  <div class="footer-cols">
+    <div><a class="logo" href="#home">WEAR YOUR STYLE<span>.</span></a><p>Everyday streetwear for wherever life takes you. Make the basics your own.</p></div>
+    <div><h4>Explore</h4><a href="#shop">Shop all</a><a href="#categories">Categories</a><a href="#about">Our story</a></div>
+    <div><h4>Help</h4><a href="#policies" onclick="showPolicy(event,'Shipping information')">Shipping information</a><a href="#policies" onclick="showPolicy(event,'Returns and exchanges')">Returns and exchanges</a><a href="mailto:hello@example.com">Contact us</a></div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Wear Your Style. All rights reserved.</div>
+</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h3>Your bag (<span id="drawerCount">0</span>)</h3><button class="close" id="closeBag">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-bottom">
+    <div class="total"><span>Subtotal</span><span id="total">₹0</span></div>
+    <p style="font-size:11px;color:#777">Shipping and final charges must be confirmed before ordering.</p>
+    <button class="btn dark" id="checkout" style="width:100%">Continue to order ↗</button>
+  </div>
+</aside>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div id="formView">
+      <div class="modal-top"><div><h3>Order details</h3><p>Enter your details so the store owner can contact you.</p></div><button class="close" id="closeModal">×</button></div>
+      <form id="orderForm">
+        <div class="form-grid">
+          <div class="field"><label for="name">Full name *</label><input id="name" name="name" required></div>
+          <div class="field"><label for="phone">WhatsApp / phone *</label><input id="phone" name="phone" type="tel" required></div>
+          <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" required></div>
+          <div class="field"><label for="size">Preferred size *</label><select id="size" name="size" required><option value="">Choose size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select></div>
+          <div class="field full"><label for="address">Delivery address *</label><textarea id="address" name="address" rows="3" required></textarea></div>
+          <div class="field full"><label for="note">Additional note (optional)</label><input id="note" name="note"></div>
+        </div>
+        <div class="summary" id="orderSummary"></div>
+        <div class="notice"><b>Demo checkout:</b> This form does not collect payment, send your details, or place a Qikink order. Connect a secure backend and payment gateway before accepting real orders.</div>
+        <button class="btn dark" style="width:100%" type="submit">Prepare order summary ↗</button>
+      </form>
+    </div>
+    <div id="success">
+      <h3>Order summary ready</h3>
+      <p>This demo has not sent your order or collected payment.</p>
+      <div class="summary" id="finalSummary"></div>
+      <button class="btn dark" id="copyOrder" style="width:100%">Copy order summary</button>
+      <button class="btn" id="backShop" style="width:100%;margin-top:10px">Back to shop</button>
+      <p id="copyMessage"></p>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// EDIT PRODUCTS HERE: change names, categories, prices and image URLs.
+const productsData = [
+ {id:1,name:"Everyday Essential Hoodie",category:"Hoodies",price:999,tag:"Bestseller",desc:"Relaxed fit · Unisex",image:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80"},
+ {id:2,name:"Classic Cotton Tee",category:"T-Shirts",price:499,tag:"Everyday",desc:"Soft feel · Regular fit",image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"},
+ {id:3,name:"Off-Duty Oversized Tee",category:"Oversized Tees",price:599,tag:"Relaxed fit",desc:"Roomy fit · Daily essential",image:"https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80"},
+ {id:4,name:"Minimal Crew Sweatshirt",category:"Sweatshirts",price:849,tag:"New",desc:"Layering essential · Unisex",image:"https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=800&q=80"},
+ {id:5,name:"Weekend Pullover Hoodie",category:"Hoodies",price:1099,tag:"Easy layer",desc:"Cozy feel · Relaxed fit",image:"https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=800&q=80"},
+ {id:6,name:"Everyday Graphic Tee",category:"T-Shirts",price:549,tag:"Popular",desc:"Easy styling · Regular fit",image:"https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=800&q=80"},
+ {id:7,name:"Street Form Oversized Tee",category:"Oversized Tees",price:649,tag:"Streetwear",desc:"Loose fit · Daily essential",image:"https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80"},
+ {id:8,name:"Everyday Layer Sweatshirt",category:"Sweatshirts",price:899,tag:"Versatile",desc:"Soft layer · Relaxed fit",image:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80"}
+];
+
+let cart=[];
+let activeFilter="All";
+let orderText="";
+const el=id=>document.getElementById(id);
+const rupees=n=>"₹"+Number(n).toLocaleString("en-IN");
+
+function renderProducts(){
+ const list=activeFilter==="All"?productsData:productsData.filter(p=>p.category===activeFilter);
+ el("products").innerHTML=list.map(p=>`
+  <article class="product">
+   <div class="product-image">
+    <img loading="lazy" src="${p.image}" alt="${p.name}">
+    <span class="tag">${p.tag}</span>
+    <button class="add" data-add="${p.id}">Add to bag +</button>
+   </div>
+   <div class="product-info">
+    <div class="product-line"><span>${p.name}</span><span>${rupees(p.price)}</span></div>
+    <p>${p.desc}</p>
+   </div>
+  </article>`).join("");
+ document.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>addToCart(Number(b.dataset.add)));
+}
+function addToCart(id){
+ const p=productsData.find(p=>p.id===id);
+ const item=cart.find(i=>i.id===id);
+ if(item)item.qty++;
+ else cart.push({...p,qty:1});
+ renderCart();
+ showToast(p.name+" added to bag");
+}
+function changeQty(id,amount){
+ const item=cart.find(i=>i.id===id);
+ if(!item)return;
+ item.qty+=amount;
+ if(item.qty<1)cart=cart.filter(i=>i.id!==id);
+ renderCart();
+}
+function renderCart(){
+ const count=cart.reduce((n,i)=>n+i.qty,0);
+ const total=cart.reduce((n,i)=>n+i.price*i.qty,0);
+ el("bagCount").textContent=count;
+ el("drawerCount").textContent=count;
+ el("total").textContent=rupees(total);
+ if(!cart.length){
+  el("cartItems").innerHTML='<div class="empty">Your bag is empty.<br>Find something you love and add it here.</div>';
+  el("checkout").disabled=true;
+  el("checkout").style.opacity=".5";
+  return;
+ }
+ el("checkout").disabled=false;
+ el("checkout").style.opacity="1";
+ el("cartItems").innerHTML=cart.map(i=>`
+  <div class="cart-item">
+   <img src="${i.image}" alt="${i.name}">
+   <div><h4>${i.name}</h4><p>${rupees(i.price)} each</p>
+    <div class="qty"><button data-minus="${i.id}">−</button><span>${i.qty}</span><button data-plus="${i.id}">+</button></div>
+    <button class="remove" data-remove="${i.id}">Remove</button>
+   </div>
+   <strong style="font-size:12px">${rupees(i.price*i.qty)}</strong>
+  </div>`).join("");
+ document.querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>changeQty(Number(b.dataset.minus),-1));
+ document.querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>changeQty(Number(b.dataset.plus),1));
+ document.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{cart=cart.filter(i=>i.id!==Number(b.dataset.remove));renderCart()});
+}
+function showToast(msg){
+ el("toast").textContent=msg;
+ el("toast").classList.add("show");
+ setTimeout(()=>el("toast").classList.remove("show"),2200);
+}
+function openBag(){
+ el("overlay").classList.add("open");
+ el("drawer").classList.add("open");
+}
+function closeBag(){
+ el("overlay").classList.remove("open");
+ el("drawer").classList.remove("open");
+}
+function openOrder(){
+ if(!cart.length)return;
+ closeBag();
+ el("orderSummary").textContent=cart.map(i=>`${i.name} — Qty ${i.qty} — ${rupees(i.price*i.qty)}`).join("\n")+"\n\nSubtotal: "+rupees(cart.reduce((n,i)=>n+i.price*i.qty,0));
+ el("formView").style.display="block";
+ el("success").style.display="none";
+ el("modalBg").classList.add("open");
+}
+function closeOrder(){el("modalBg").classList.remove("open")}
+el("openBag").onclick=openBag;
+el("closeBag").onclick=closeBag;
+el("overlay").onclick=closeBag;
+el("checkout").onclick=openOrder;
+el("closeModal").onclick=closeOrder;
+el("modalBg").onclick=e=>{if(e.target===el("modalBg"))closeOrder()};
+
+el("filters").onclick=e=>{
+ const b=e.target.closest("[data-filter]");
+ if(!b)return;
+ activeFilter=b.dataset.filter;
+ document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));
+ renderProducts();
+};
+document.querySelectorAll("[data-cat]").forEach(a=>a.onclick=()=>{
+ activeFilter=a.dataset.cat;
+ document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.filter===activeFilter));
+ renderProducts();
+});
+el("menuBtn").onclick=()=>el("navLinks").classList.toggle("open");
+document.querySelectorAll("#navLinks a").forEach(a=>a.onclick=()=>el("navLinks").classList.remove("open"));
+
+el("orderForm").onsubmit=e=>{
+ e.preventDefault();
+ const d=new FormData(e.target);
+ orderText=
+`WEAR YOUR STYLE — ORDER REQUEST (DEMO)
+
+Name: ${d.get("name")}
+Phone: ${d.get("phone")}
+Email: ${d.get("email")}
+Preferred size: ${d.get("size")}
+Address: ${d.get("address")}
+Additional note: ${d.get("note")||"None"}
+
+${cart.map(i=>`${i.name} | Quantity: ${i.qty} | ${rupees(i.price*i.qty)}`).join("\n")}
+
+TOTAL: ${rupees(cart.reduce((n,i)=>n+i.price*i.qty,0))}
+
+IMPORTANT: This order has NOT been sent or paid.`;
+ el("finalSummary").textContent=orderText;
+ el("formView").style.display="none";
+ el("success").style.display="block";
+};
+el("copyOrder").onclick=async()=>{
+ try{
+  await navigator.clipboard.writeText(orderText);
+  el("copyMessage").textContent="Copied! Paste the summary into your order management system.";
+ }catch(e){
+  el("copyMessage").textContent="Clipboard blocked. Select and copy the summary text manually.";
+ }
+};
+el("backShop").onclick=()=>{closeOrder();showToast("Continue browsing the shop")};
+el("newsForm").onsubmit=e=>{
+ e.preventDefault();
+ el("newsMessage").textContent="Demo only: email was not saved. Connect an email marketing service first.";
+ el("newsEmail").value="";
+};
+function showPolicy(e,title){
+ e.preventDefault();
+ alert(title+": Add your real store policy before publishing.");
+}
+el("year").textContent=new Date().getFullYear();
+renderProducts();
+renderCart();
+</script>
+</body>
+</html>
